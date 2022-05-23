@@ -5,10 +5,11 @@
 `Python3 + Docker`
 
 # 使用
-1. 遍历所有代码放入一个markdown文件中：`python main.py -p path -o mdFile`
+1. 查看`main.py`中的文件忽略配置，按需进行修改。
+2. 遍历所有代码放入一个markdown文件中：`python main.py -p path -o mdFile`
 
 
-2. 使用pandoc将md文件转为MS Word文件
+3. 使用pandoc将md文件转为MS Word文件
 ```bash
 docker run --rm \             
        --volume "$(pwd):/data" \

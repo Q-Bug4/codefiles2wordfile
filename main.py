@@ -9,14 +9,15 @@ parser.add_argument('--output', '-o', help='输出文件名', default='source.md
 args = parser.parse_args()
 
 result = ''
-ignores = ['test', 'LICENSE']
-ignoresReg = ['^\.', '^(mvnw)']
-ignoresExt = ['iml', 'md', 'png', 'jpg']
-
 highlights = {
         'vue': 'javascript',
         'py': 'python',
 }
+
+# 忽略文件
+ignores = ['test', 'LICENSE'] # 完全匹配
+ignoresReg = ['^\.', '^(mvnw)'] # 正则匹配
+ignoresExt = ['iml', 'md', 'png', 'jpg'] # 后缀匹配
 
 def isIgnore(dir):
     for reg in ignoresReg:
