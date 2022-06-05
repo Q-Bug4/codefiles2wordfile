@@ -26,3 +26,12 @@ docker run --rm \
        --user $(id -u):$(id -g) \
        pandoc/core source.md -o outfile.docx -t docx
 ```
+
+# 常见报错
+1. 文件读取错误
+一般该错误提示如下. 主要原因是因为没有过滤掉一些二进制或者非纯文本的文件，导致读取出错。
+```python
+File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa8 in position 14: invalid start byte
+```
