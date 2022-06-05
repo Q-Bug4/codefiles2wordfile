@@ -15,9 +15,9 @@ highlights = {
 }
 
 # 忽略文件
-ignores = ['test', 'LICENSE'] # 完全匹配
+ignores = ['test', 'LICENSE', 'Lo-runner', '__pycache__'] # 完全匹配
 ignoresReg = ['^\.', '^(mvnw)'] # 正则匹配
-ignoresExt = ['iml', 'md', 'png', 'jpg'] # 后缀匹配
+ignoresExt = ['iml', 'md', 'png', 'jpg', 'ico'] # 后缀匹配
 
 def isIgnore(dir):
     for reg in ignoresReg:
