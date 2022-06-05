@@ -56,7 +56,7 @@ def dir2md(dirs, level):
     dirs = [d for d in dirs[1:] if isinstance(d, list)]
     if len(files) > 0:
         # Windows用户需要转移反斜杠，否则word的标题会出错
-        output('#' * level + ' ' + folder.replace("\\", "\\\\").replace("#", "\\#"))
+        output('#' * level + ' ' + folder.replace("\\", "\\\\").replace("#", "\\#").replace(args.path,".", 1))
     else:
         level-=1
     for file in files:
